@@ -27,26 +27,3 @@ let avatar =
     )
   );
 
-module Ionicons = {
-  [@bs.module "@expo/vector-icons"] [@react.component]
-  external make:
-    (~name: string, ~color: string=?, ~size: int=?) => React.element =
-    "Ionicons";
-};
-
-module FontAwesome5 = {
-  [@bs.module "@expo/vector-icons"] [@react.component]
-  external make:
-    (~name: string, ~color: string=?, ~size: int=?) => React.element =
-    "FontAwesome5";
-};
-
-module IconShell = {
-  [@react.component]
-  let make = (~name, ~size=20) => {
-    // let color =
-    //   selected ? Styles.theme.palette.primary : Styles.theme.palette.grey;
-    let tintColor = Theme.Colors.highlight;
-    <View> <FontAwesome5 name size color=tintColor /> </View>;
-  };
-};

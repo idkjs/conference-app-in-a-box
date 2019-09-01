@@ -101,31 +101,11 @@ let make = (~navigation: Navigation.t) => {
     </View>
   </View>;
 };
-module MapIcon = {
-  [@react.component]
-  let make = () => {
-    <FontAwesome
-      // <Icon color=Colors.highlight name="logo-twitter" size=20 />;
-      name=`user
-      size=20
-      color=Colors.highlight
-    />;
-  };
-};
-// module ProfileIcon = {
-//   open ReasonExpoVectorIcons;
-//   [@react.component]
-//   let make = () => {
-//     <Ionicons name=`iosSearch size=20 color="green" />
-//   };
-// };
-let tabBarIcon = NavigationOptions.TabBarIcon.element(<MapIcon />);
+
 make->NavigationOptions.setNavigationOptions(
   NavigationOptions.t(
     ~title="Profile",
-    // ~tabBarIcon=NavigationOptions.TabBarIcon.element(<MapIcon />),
     ~tabBarIcon=Helpers.tabBarIcon(~name=`user),
     (),
   ),
-) /* )*/ /*   NavigationOptions.t(~title="Profile", ())*/;
-// make->NavigationOptions.setNavigationOptions(
+);
