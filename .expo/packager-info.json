@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 58671,
+  "expoServerNgrokUrl": "https://vx-5x5.idkjs.conference-app-in-a-box-my-clone.exp.direct",
+  "packagerNgrokUrl": "https://packager.vx-5x5.idkjs.conference-app-in-a-box-my-clone.exp.direct",
+  "ngrokPid": 58702
 }
