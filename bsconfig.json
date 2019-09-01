@@ -1,0 +1,36 @@
+{
+  "name": "conf-box-example",
+  "reason": {
+    "react-jsx": 3
+  },
+  "refmt": 3,
+  "bsc-flags": [
+    "-bs-super-errors",
+    "-bs-g"
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs":true
+    }
+  ],
+  "bs-dependencies": [
+    "reason-react",
+    "reason-react-native",
+    "reason-expo",
+    "reason-react-navigation",
+    "reason-expo",
+    "bs-promise-monad",
+    "bs-webapi",
+    "bs-faker",
+    "reason-apollo",
+    "@glennsl/bs-json",
+    "reason-react-native-maps"
+  ],
+  "ppx-flags": ["graphql_ppx/ppx", "get_in_ppx/ppx"]
+}
