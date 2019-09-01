@@ -1,5 +1,5 @@
 open ReactNative;
-open ProfileStyle;
+open AppStyle.Profile;
 
 [@react.component]
 let make = (~github, ~twitter) =>

@@ -1,6 +1,6 @@
 open ReactNative;
 open ReactNavigation;
-open ProfileStyle;
+open AppStyle.Profile;
 
 type state = {
   username: string,

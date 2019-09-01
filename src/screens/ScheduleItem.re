@@ -1,6 +1,6 @@
 open ReactNative;
 // open ReactNavigation;
-open ScheduleStyle;
+open AppStyle.Schedule;
 
 [@react.component]
 let make = (~talk: TalkType.t, ~onPress) =>

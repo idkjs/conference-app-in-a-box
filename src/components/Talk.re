@@ -1,6 +1,6 @@
 open ReactNative;
 open ReactNavigation;
-open TalkStyles;
+open AppStyle.Talk;
 [@react.component]
 let make = (~navigation: Navigation.t) => {
   let getTalk: Js.nullable(TalkType.t) =

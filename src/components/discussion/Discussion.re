@@ -1,6 +1,6 @@
 open ReactNative;
 open ReactNavigation;
-open DiscussionStyle;
+open AppStyle.Discussion;
 module Discussion ={
   type comment = {
   .

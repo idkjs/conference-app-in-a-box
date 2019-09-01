@@ -1,6 +1,6 @@
 open ReactNative;
 open ReactNavigation;
-open ScheduleStyle;
+open AppStyle.Schedule;
 
 module Schedule = {
   type talk = TalkType.t;
@@ -53,9 +53,9 @@ module Schedule = {
                 <FlatList
                   data=filteredTalks
                   keyExtractor={(talk, _) => talk##id}
-                  renderItem={props => {
-                    // let talk = props##item;
+                  renderItem={props =>
                     <ScheduleItem
+                      // let talk = props##item;
                       onPress={_ =>
                         navigation->Navigation.navigateWithParams(
                           "Talk",
@@ -63,8 +63,8 @@ module Schedule = {
                         )
                       }
                       talk=props##item
-                    />;
-                  }}
+                    />
+                  }
                 />
               </View>
             </ScrollView>
@@ -157,14 +157,15 @@ let make =
     )
   );
 
-  make->NavigationOptions.setNavigationOptions(
+make->NavigationOptions.setNavigationOptions(
   NavigationOptions.t(
     ~title="Schedule",
     ~tabBarIcon=Helpers.tabBarIcon(~name=`calendar),
     (),
-  ));
-  // headerStyle only being applied when passed to defaultNavigationOptions.
-  // this version doesnt shared headerStyle values
+  ),
+) /* ))*/;
+// headerStyle only being applied when passed to defaultNavigationOptions.
+// this version doesnt shared headerStyle values
 // let make =
 //   StackNavigator.
 //     make(
@@ -177,10 +178,9 @@ let make =
 //         },
 //       }
 //   );
-  // make->NavigationOptions.setNavigationOptions(
-  // NavigationOptions.t(
-  //   ~title="Schedule",
-  //   ~tabBarIcon=Helpers.tabBarIcon(~name=`calendar),
-  //   ~headerStyle=headerStyle,
-  //   (),
-  // ));
+// make->NavigationOptions.setNavigationOptions(
+// NavigationOptions.t(
+//   ~title="Schedule",
+//   ~tabBarIcon=Helpers.tabBarIcon(~name=`calendar),
+//   ~headerStyle=headerStyle,
+//   (),

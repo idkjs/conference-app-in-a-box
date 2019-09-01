@@ -1,7 +1,7 @@
 open ReactNative;
 open ReactNavigation;
 
-open PagerStyle;
+open AppStyle.Pager;
 
 [@react.component]
 let make = (~navigation: Navigation.t) => {
@@ -55,14 +55,11 @@ let make = (~navigation: Navigation.t) => {
 
 make->NavigationOptions.setDynamicNavigationOptions(params => {
   let navigation = params##navigation;
-  let title = navigation
-  ->Navigation.getParam("talk")
-  ->Js.Nullable.toOption
-  ->Belt.Option.mapWithDefault("Talk", t => t##name);
+  let title =
+    navigation
+    ->Navigation.getParam("talk")
+    ->Js.Nullable.toOption
+    ->Belt.Option.mapWithDefault("Talk", t => t##name);
 
-  NavigationOptions.t(
-    ~title,
-    ~headerTintColor=Theme.Colors.highlight,
-    (),
-  );
+  NavigationOptions.t(~title, ~headerTintColor=Theme.Colors.highlight, ());
 });

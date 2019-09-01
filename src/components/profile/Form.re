@@ -1,5 +1,5 @@
 open ReactNative;
-open ProfileStyle;
+open AppStyle.Profile;
 
 [@react.component]
 let make = (~onChange: ('a, 'a) => unit, ~twitter, ~github) =>
@@ -22,7 +22,6 @@ let make = (~onChange: ('a, 'a) => unit, ~twitter, ~github) =>
         autoCorrect=false
       />
     </View>
-  </View>;
+  </View> /* let default = make*/;
 
 // [@genType]
-// let default = make;
